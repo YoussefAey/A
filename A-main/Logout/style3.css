@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+@font-face {
+    font-family: 'TeX Gyre Chorus';
+    font-style: italic;
+    font-weight: 500;
+    src: local('TeX Gyre Chorus'), url('https://fonts.cdnfonts.com/s/52832/texgyrechorus-mediumitalic.woff') format('woff');
+  }
+
+.hidden {
+    display: none;
+}
+
+/* Styles for the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: transparent ;
+    min-width: 120px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/*Default Popins ital   ... */
+
+.dropdown-content a:lang(en),
+.dropdown-content a:lang(fr) {
+    font-family: 'poppins',sans-serif;
+}
+
+/* Font for Arabic text */
+.dropdown-content a:lang(ar) {
+    font-family: "Noto Kufi Arabic", serif;
+}
+/* Font for Jp text */
+.dropdown-content a:lang(jp) {
+    font-family: "Sawarabi Mincho", serif;
+}
+
+/* Show the dropdown content when the button is clicked */
+
+.show {
+    display: block;
+}
+
+/* Arabic-specific styles */
+[lang="ar"] {
+    font-family: "Noto Nastaliq Urdu", serif;
+}
+/* Arabic-specific logo font */
+[lang="ar"] .logo {
+    font-family: "Noto Nastaliq Urdu", serif;
+    font-size: 2rem; /* Adjust size */
+    font-weight: 700; /* Make it bold */
+}
+
+
+/* Arabic-specific styles for buttons and links */
+[lang="ar"] .navigation a,
+[lang="ar"] .btnlogin-popup {
+    font-family: "Noto Kufi Arabic", serif;
+    font-size: 1rem; /* Adjust size */
+    padding: 0.5em 1em; /* Add spacing */
+    letter-spacing: 0.03em; /* Add slight spacing for readability */
+}
+/* Japanese-specific styles */
+[lang="jp"] {
+    font-family: "Sawarabi Mincho", serif;
+}
+[lang="jp"] .logo {
+    font-family: "Sawarabi Mincho", serif;
+    font-size: 2rem; /* Adjust size */
+    font-weight: 700; /* Make it bold */
+}

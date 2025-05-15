@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+  <title>Read PDFs</title>
+    <script>
+        // Check if the user is logged in
+        if (sessionStorage.getItem('loggedIn') !== 'true') {
+            // If not, redirect to the login page
+            window.location.href = "../index.html"; // Login page URL
+        }
+    </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="icon" href="1.png" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #282c34;
+      background: url(s.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+      background-attachment: fixed;
+      line-height: 1.6;
+      flex-direction: column;
+      display: flex;
+      overflow-y: auto;
+    }
+    header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px;
+     }
+
+
+
+    .pdf-item {
+      display: flex;
+      align-items: center;
+      margin: 20px auto;
+      padding: 15px;
+      width: 800px;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .pdf-item:hover {
+      background-color: #f9f9f9;
+    }
+
+
+
+
+    .pdf-info {
+      margin-left: 20px;
+      flex-grow: 1;
+    }
+
+    .pdf-info h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .pdf-info p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #666;
+    }
+    .pdf-item p {
+        font-family: 'Courier New', monospace; /* Set to monospace font */
+
+            font-size: 20px;
+            line-height: 1.6;
+            color: #0c0a0a;
+            padding: 10px; /* Optional: adds padding to the text for better readability */
+
+
+        }
+
+    .pdf-item h3 {
+            font-family: 'TeX Gyre Chorus', cursive;
+            color: rgb(93, 76, 72);
+            text-align: center;
+            font-size: 25px;
+        }
+        
+    .icon-link {
+        margin-right: 20px; /* Spacing between the icon and the logo */
+        text-decoration: none;
+        }
+
+    .logo{
+          font-family: 'TeX Gyre Chorus', cursive;
+          font-size: 1.5em;
+          color: #ffffff;
+          user-select: none;
+        }
+
+    .icon {
+    width: 40px; /* Set desired size */
+    height: 40px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth animation */
+       }
+
+    .icon:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+       }
+
+  </style>
+</head>
+<body>
+
+    <header>
+      <a href="javascript:void(0);" class="icon-link" onclick="goBack()">
+        <img src="arrow.png" alt="Arrow Icon" class="icon">      </a>
+        <h2 class="logo">B. Youssef</h2>
+    </header> 
+
+    <script>
+      function goBack() {
+          window.history.back();  // Navigate back to the previous page
+      }
+  </script>
+      <div class="pdf-item" onclick="openDriveLink('https://drive.google.com/file/d/1Ml0hJTM3tdQro6rGVvE0z_qHCD6pN8jc/view?usp=sharing')">
+
+    <div class="pdf-info">
+      <h3>ANALYSE</h3>
+      <p>L'ANALYSE RÉELLE : Construction des nombres réels.</p>
+      <p>Click here to view the document on Google Drive.</p>
+    </div>
+  </div>
+
+  <!-- PDF 1 -->
+    <div class="pdf-item" onclick="openDriveLink('https://drive.google.com/file/d/1wv_M5_wMyMVagp6UN6h-NiH1H5uI3Ou6/view?usp=sharing')">
+
+    <div class="pdf-info">
+      <h3>ANALYSE </h3>
+      <p>Intégrale de Riemann.</p>
+      <p>Click Here to view the document on Google Drive.</p>
+    </div>
+  </div>
+  
+    <div class="pdf-item" onclick="openDriveLink('https://drive.google.com/file/d/1IAuo9oRx1tefodh07JtpAat7btTiV4kz/view?usp=sharing')">
+
+    <div class="pdf-info">
+      <h3>ANALYSE  </h3>
+      <p>Dérivabilité</p>
+      <p>Click Here to view the document on Google Drive.</p>
+    </div>
+  </div>
+
+      <div class="pdf-item" onclick="openDriveLink('https://drive.google.com/file/d/1E4I3AkLQFub1hX09bFlRk45tip3ksaZr/view?usp=sharing')">
+
+    <div class="pdf-info">
+      <h3>ALGÈBRE </h3>
+      <p>ALGÈBRE ABSTRAITE : Un guide pratique de l'algèbre élémentaire.</p>
+      <p>Click Here to view the document on Google Drive.</p>
+    </div>
+  </div>
+
+
+  <div class="pdf-item" onclick="openDriveLink('https://drive.google.com/file/d/1WHULm_gI0E2zMBH42JbydZkuGWFcXcZA/view?usp=sharing')">
+
+    <div class="pdf-info">
+      <h3>TOPOLOGIE </h3>
+      <p>TOPOLOGIE ALGÈBRIQUE : Exploration conceptuelle de la topologie algébrique.</p>
+      <p>Click Here to view the document on Google Drive.</p>
+    </div>
+  </div>
+  
+  <div class="pdf-item" onclick="openDriveLink('https://drive.google.com/file/d/1Iolw-ELFxj0qf4yp38hcfMBTsO4mQ305/view?usp=sharing')">
+
+    <div class="pdf-info">
+      <h3>TOPOLOGIE (not completed) </h3>
+      <p>Problème : Connexité de l'ensemble d'adhérence d'une
+        suite dans un espace métrique compact.</p>
+      <p>Click Here to view the document on Google Drive.</p>
+    </div>
+  </div>
+
+  <!-- PDF 2 -->
+  <div class="pdf-item" onclick="openDriveLink('https://drive.google.com/file/d/1j7SWkJwRUgExuSf4Clj1qrGhdJM-BN65/view?usp=sharing')">
+    <div class="pdf-info">
+      <h3>ANALYSE NUMERIQUE</h3>
+      <p>TP : Compte Rendue.</p>
+      <p>Click Here to view the document on Google Drive.</p>
+    </div>
+  </div>
+
+  <div class="pdf-item" onclick="openDriveLink('https://drive.google.com/file/d/1JCkUdrqDlNmdbPM0FZxxpaL18fWN8FHp/view?usp=sharing')">
+    
+  <div class="pdf-info">
+      <h3>ANALYSE NUMERIQUE</h3>
+      <p>Exercice.</p>
+      <p>Click Here to view the document on Google Drive.</p>
+    </div>
+  </div>
+
+
+
+  <!-- PDF 3 -->
+  <div class="pdf-item" onclick="openDriveLink('https://drive.google.com/file/d/1EyB5j9Zfb3PP_lwoK6g620U1DX9Veqc9/view?usp=sharing')">
+
+    <div class="pdf-info">
+      <h3>ANALYSE</h3>
+      <p>Exercice sur le théorème d'inversion globale.</p>
+      <p>Click here to view the document on Google Drive.</p>
+    </div>
+  </div>
+
+
+      <!-- more -->
+  <div class="pdf-item" >
+
+
+    <div class="pdf-info">
+      <p> Wait for more </p>
+      <p> </p>
+    </div>
+  </div>
+
+  <script>
+    function openDriveLink(link) {
+      window.open(link, '_blank');
+    }
+  </script>
+
+</body>
+</html>

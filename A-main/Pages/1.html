@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Square</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <!-- Decorative Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="icon" href="1.png" type="image/x-icon">
+    <script>
+        // Check if the user is logged in
+        if (sessionStorage.getItem('loggedIn') !== 'true') {
+            // If not, redirect to the login page
+            window.location.href = "../index.html"; // Login page URL
+        }
+    </script>
+
+    <style>
+         @font-face {
+          font-family: 'TeX Gyre Chorus';
+          font-style: italic;
+          font-weight: 500;
+          src: local('TeX Gyre Chorus'), url('https://fonts.cdnfonts.com/s/52832/texgyrechorus-mediumitalic.woff') format('woff');
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+            background-image: url('../3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            color: #fff;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto; /* Enable scrolling */
+        }
+
+        .video-container {
+            position: relative;
+            width: 900px;
+            max-width: 90%;
+            height: auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            margin-top: 20px; /* Add some margin at the top */
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px; /* Adjust the height of the iframe */
+            border: none;
+            display: block;
+        }
+
+        .video-title {
+            font-family: "TeX Gyre Chorus", cursive;
+            font-size: 30px;
+            color: #fff;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+         .description-section {
+            color: rgb(0, 0, 0);
+            margin-top: 40px; /* Add space between video and description */
+            text-align: left;
+            padding: 10px;
+            width: 900px;
+            max-width: 90%;
+            border: 2px solid rgba(28, 26, 26, 0.7); /* Transparent red border */
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+            border-radius: 8px;
+        }
+
+        .description-section h2 {
+            font-family: 'TeX Gyre Chorus', cursive;
+            color: rgb(221, 6, 6);
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .description-section p {
+        font-family: 'Courier New', monospace; /* Set to monospace font */
+
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff;
+            padding: 10px; /* Optional: adds padding to the text for better readability */
+        }
+
+        .description-section h3 {
+            font-family: 'TeX Gyre Chorus', cursive;
+            color: rgb(93, 76, 72);
+            text-align: Right;
+            font-size: 25px;
+            margin-bottom: 10px;
+            margin-right: 20px;
+        }
+            header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px;
+     }
+
+    .icon-link {
+      margin-right: 20px;
+      text-decoration: none;
+    }
+
+    .logo {
+      font-family: 'TeX Gyre Chorus', cursive;
+      font-size: 1.5em;
+      color: #ffffff;
+      user-select: none;
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      vertical-align: middle;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .icon:hover {
+      transform: scale(1.2);
+    }
+        
+    </style>
+</head>
+<body>
+  <header>
+    <a href="javascript:void(0);" class="icon-link" onclick="goBack()">
+      <img src="arrow.png" alt="Arrow Icon" class="icon">
+    </a>
+    <h2 class="logo">B. Youssef</h2>
+  </header> 
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+    
+    <div class="video-container">
+        <!-- YouTube Video Player -->
+        <iframe 
+            id="videoPlayer" 
+            src="https://www.youtube.com/embed/AZd4JgSMOm0" 
+            title="Magic Square Video Player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+        <!-- Title under the video -->
+        <div class="video-title">Magic Square</div>
+    </div>
+
+    <!-- Description section moved here -->
+    <div class="description-section">
+        <h2>Description of the video</h2>
+        <p>I made a video about my Ramanujan magic square with my own date of birth, using Python and its library Manim for animated mathematics videos, where the magic constant is 61! In this video, I explore the unique properties of this fascinating square, showing how every row, column, and diagonal (and others) adds up to the same number. It's a blend of creativity and mathematical beauty that you won't want to miss. Check it out and let me know what you think!</p>
+        <p>Srinivasa Ramanujan (1887 – 1920) was an Indian mathematician renowned for his extraordinary contributions to number theory, continued fractions, and infinite series, among other areas. Despite having little formal training, he developed numerous groundbreaking mathematical results, many of which were ahead of their time. His work on partition theory, the theory of modular forms, and the famous Ramanujan-Hardy number (1729) are just a few examples of his legacy. His intuitive, self-taught approach to mathematics has made him one of the most celebrated figures in the field.</p>
+        <p>Music used in this video: 'AURA' by Ogryzek.</p>
+        <h3>B. Youssef .</h3>
+    </div>
+</body>
+</html>

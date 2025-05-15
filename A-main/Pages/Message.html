@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+  <title>Message for you ! </title>
+    <script>
+        // Check if the user is logged in
+        if (sessionStorage.getItem('loggedIn') !== 'true') {
+            // If not, redirect to the login page
+            window.location.href = "../index.html"; // Login page URL
+        }
+    </script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="icon" href="1.png" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #282c34;
+      background: url(s.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+      line-height: 1.6;
+      flex-direction: column;
+      display: flex;
+      overflow-y: auto;
+    }
+    header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px;
+     }
+
+
+
+    .pdf-item {
+      display: flex;
+      align-items: center;
+      margin: 20px auto;
+      padding: 15px;
+      width: 800px;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .pdf-item:hover {
+      background-color: #f9f9f9;
+    }
+
+
+
+
+    .pdf-info {
+      margin-left: 20px;
+      flex-grow: 1;
+    }
+
+    .pdf-info h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .pdf-info p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #666;
+    }
+    .pdf-item p {
+        font-family: 'Courier New', monospace; /* Set to monospace font */
+
+            font-size: 20px;
+            line-height: 1.6;
+            color: #0c0a0a;
+            padding: 10px; /* Optional: adds padding to the text for better readability */
+
+
+        }
+
+    .pdf-item h3 {
+            font-family: 'TeX Gyre Chorus', cursive;
+            color: rgb(93, 76, 72);
+            text-align: center;
+            font-size: 25px;
+        }
+        
+    .icon-link {
+        margin-right: 20px; /* Spacing between the icon and the logo */
+        text-decoration: none;
+        }
+
+    .logo{
+          font-family: 'TeX Gyre Chorus', cursive;
+          font-size: 1.5em;
+          color: #ffffff;
+          user-select: none;
+        }
+
+    .icon {
+    width: 40px; /* Set desired size */
+    height: 40px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth animation */
+       }
+
+    .icon:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+       }
+
+       .description-section {
+            color: rgb(0, 0, 0);
+            margin-top: 40px; /* Add space between video and description */
+            text-align: center;
+            padding: 10px;
+            width: 900px;
+            max-width: 90%;
+            border: 2px solid rgba(28, 26, 26, 0.7); /* Transparent red border */
+            background-color: rgba(255, 255, 255, 0.4); /* Transparent background */
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+            .description-section:hover {
+            background-color: #f9f9f9;
+             }
+
+        .description-section h2 {
+            font-family: 'TeX Gyre Chorus', cursive;
+            color: rgb(221, 6, 6);
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .description-section p {
+        font-family: 'TeX Gyre Chorus', cursive;
+
+            font-size: 25px;
+            line-height: 1.6;
+            color: #000000;
+            padding: 10px; /* Optional: adds padding to the text for better readability */
+        }
+        .description-section h3 {
+            font-family: 'TeX Gyre Chorus', cursive;
+            color: rgb(93, 76, 72);
+            text-align: Right;
+            font-size: 25px;
+            margin-bottom: 10px;
+            margin-right: 20px;
+        }
+
+  </style>
+</head>
+<body>
+
+    <header>
+      <a href="javascript:void(0);" class="icon-link" onclick="goBack()">
+        <img src="arrow.png" alt="Arrow Icon" class="icon">      </a>
+        <h2 class="logo">B. Youssef</h2>
+    </header> 
+
+    <script>
+      function goBack() {
+          window.history.back();  // Navigate back to the previous page
+      }
+  </script>
+
+<div class="description-section">
+    <h2> Hey you! </h2>
+    <p> I have a serious confession as always...</p>
+    <p> You are a good person, and I'm glad I got to know you.</p>
+    <p> Thank you.</p>
+    <h3>B. Youssef .</h3>
+</div>
+ 
+
+  <script>
+    function openDriveLink(link) {
+      window.open(link, '_blank');
+    }
+  </script>
+
+</body>
+</html>

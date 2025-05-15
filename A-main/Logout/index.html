@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>~ B. Youssef ~</title>
+    <script>
+        // Check if the user is logged in
+        if (sessionStorage.getItem('loggedIn') !== 'true') {
+            // If not, redirect to the login page
+            window.location.href = "../index.html"; // Login page URL
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="icon" href="1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+</head>
+<body>
+    <header>
+        <h2 class="logo">B. Youssef</h2>
+       <!-- Message section -->
+       <div class="text-section"></div>
+        <nav class="navigation">
+            <div class="dropdown">
+                <a onclick="toggleDropdown()" class="dropbtn" id="language-link">Language</a>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#" onclick="changeLanguage('en')" lang="en">English</a>
+                    <a href="#" onclick="changeLanguage('fr')" lang="fr">Français</a>
+                    <a href="#" onclick="changeLanguage('ar')" lang="ar">العربية</a>
+                    <a href="#" onclick="changeLanguage('am')">ⴰⵎⴰⵣⵉⵖⵉⴰ</a>
+                    <a href="#" onclick="changeLanguage('jp')" lang="jp">日本語</a>
+                </div>
+                
+            </div>
+
+            <button class="btnlogin-popup" onclick="window.location.href='../index.html';">Logout</button>
+        </nav>
+        
+    </header>
+
+   
+
+
+
+    
+
+
+
+        <div class="container">
+            <!-- Video Card -->
+            <a href="../Pages/Videos.html" class="card" id="v-card">
+                <i class="fas fa-play-circle icon"></i>
+                <div class="title">Watch Videos</div>
+            </a>
+            <!-- PDF Card -->
+            <a href="../Pages/PDFS.html" class="card" id="p-card">
+                <i class="fas fa-file-alt icon"></i>
+                <div class="title">Read PDFs</div>
+            </a>
+
+            
+            <!-- Message Card -->
+            <a href="../Pages/Message.html" class="card" id="m-card">
+                <i class="fas fa-envelope icon"></i>
+                <div class="title">
+                    Message<br>for you !
+                </div>
+                
+            </a>
+        </div>
+
+
+
+
+
+    
+   <script src="scripts.js"></script>
+    
+</body>
+</html>
