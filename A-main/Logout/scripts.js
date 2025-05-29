@@ -15,6 +15,10 @@
     // Check the email and display the corresponding message
     if (email === "Fatima-zahra.berhili@ump.ac.ma") {
         textDiv.textContent = "Welcome Ms. Fatima-Zahra BERHILI !";
+      } else {
+     if (email === "Ouahab@fso.m") {
+        textDiv.textContent = "Welcome Mr. Abdelmalek OUAHAB !"; 
+        mCard.style.display = "none";
     
     } else {
         textDiv.textContent = "Hello!"; // Default message
