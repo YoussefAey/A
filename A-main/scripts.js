@@ -46,6 +46,8 @@ document.querySelector('.form-box.login form').addEventListener('submit', (e) =>
           "Youssef@pi.m"
         ],
         "etudiant" : ["etudiant@fso.m"],
+         "123" : ["Ouahab@fso.m"],
+        
 
    
         "123" : ["Fatima-zahra.berhili@ump.ac.ma"]
